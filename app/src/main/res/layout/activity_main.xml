@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.ContentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/view_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".exo.FileActivity"
+        android:gravity="center"
+        app:divider="@drawable/shape_line"
+        app:showDividers="beginning|middle|end"
+        app:dividerPadding="15dp"
+        >
+
+        <Button
+            android:id="@+id/btn_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始播放" />
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="结束" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.v7.widget.ContentFrameLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorBlueAlpha7">#a10099FF</color>
+    <color name="colorBlueAlpha5">#990099FF</color>
+    <color name="colorBlueAlpha3">#560099FF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGoden">#eca50d</color>
+    <color name="colorGodenAlpha8">#aaeca50d</color>
+    <color name="colorGodenAlpha5">#99eca50d</color>
+    <color name="colorGodenAlpha3">#56eca50d</color>
+
+    <color name="colorWhiteAlpha1">#10ffffff</color>
+    <color name="colorWhiteAlpha2">#30ffffff</color>
+    <color name="colorWhiteAlpha3">#48ffffff</color>
+    <color name="colorWhiteAlpha4">#64ffffff</color>
+    <color name="colorWhiteAlpha5">#84ffffff</color>
+    <color name="colorWhiteAlpha6">#96ffffff</color>
+    <color name="colorWhiteAlpha7">#b2ffffff</color>
+    <color name="colorWhiteAlpha8">#c9ffffff</color>
+    <color name="colorWhiteAlpha9">#e0ffffff</color>
+    <color name="colorBlackAlpha2">#30000000</color>
+    <color name="colorBlackAlpha3">#48000000</color>
+    <color name="colorBlackAlpha4">#64000000</color>
+    <color name="colorBlackAlpha5">#84000000</color>
+    <color name="colorBlackAlpha6">#96000000</color>
+    <color name="colorBlackAlpha7">#b2000000</color>
+    <color name="colorBlackAlpha8">#c9000000</color>
+    <color name="colorBlackAlpha9">#dd000000</color>
+
+    <color name="colorRedLow">#30ff0000</color>
+    <color name="colorRedHigh">#890000</color>
+
+
+    <color name="spliter_line_color">#33969696</color>
+    <color name="favorite_checked_color">#ffdd45</color>
+    <color name="lock_checked_color">#ffdd45</color>
+    <color name="expiretime_warning_textcolor">#ffeca50d</color>
+    <color name="menubar_item_textcolor">#e9e9e9</color>
+
+
+    <color name="messagebox_mask_color">#60000000</color>
+    <color name="messagebox_content_bgcolor">#000000</color>
+
+    <color name="dialog_mask_color">#d0000000</color>
+    <color name="dialog_content_bgcolor">#e81d1d1d</color>
+    <color name="dialog_button_textcolor">#80ffffff</color>
+    <color name="dialog_button_focused_textcolor">#ffffff</color>
+    <color name="dialog_edit_textcolor">#60ffffff</color>
+    <color name="dialog_edit_focused_textcolor">#ffffff</color>
+    <color name="dialog_textarea_textcolor">#80ffffff</color>
+    <color name="dialog_textarea_focused_textcolor">#ffffff</color>
+    <color name="dialog_textarea_scrollbar_color">#80ffffff</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- test item bg-->
+    <color name="test_item_focused">#a90000</color>
+    <color name="test_item_actived">#60ff0000</color>
+    <color name="test_item_default">#30ff0000</color>
+
+    <color name="progressBarProgress">#0099ff</color>
+    <color name="progressBarTrack">#553c4358</color>
+
+    <!-- -->
+    <color name="focus_border">#ffffff</color>
+    <color name="focus_shadow">#00000000</color>
+
+    <!--bigcut color -->
+    <color name="bigCutTvIndex">#2db5fe</color>
+    <color name="bigCutCanEdit0">#95d209</color>
+    <color name="bigCutCanEdit1">#fece00</color>
+    <color name="bigCutCanEdit2">#329fff</color>
+    <color name="bigCutCanEdit3">#59d3fd</color>
+    <color name="bigCutCanEdit4">#00c5c4</color>
+    <color name="bigCutCanEdit5">#fb8670</color>
+    <color name="bigCutInLauncher0">#83d120</color>
+    <color name="bigCutInLauncher1">#6179ee</color>
+
+    <color name="homeBottomAddedItem">#547790</color>
+    <color name="chooseAddedItem">#55474e65</color>
+    <color name="fileHomeItem">#329eff</color>
+    <color name="fileItem">#55474e65</color>
+
+
+    <color name="item_border_color">#666666</color>
+    <color name="item_default_color">#EEEEEE</color>
+    <color name="item_pressed_color">#CCCCCC</color>
+    <color name="item_activated_color">#77CEEE</color>
+    <color name="green_99cc00">#99cc00</color>
+    <color name="green_bright">#00FF00</color>
+
+    <!-- test -->
+    <color name="red">#ff0000</color>
+    <color name="yellow">#ffff00</color>
+    <color name="blue">#0000ff</color>
+    <color name="wblue">#0099ff</color>
+    <color name="alpha">#00000000</color>
+
+    <!-- -->
+    <color name="item_ins_focus">#44ff0000</color>
+    <color name="item_ins_normal">#44000000</color>
+
+    <color name="bg_menu_focused">@color/mainTheme</color>
+    <color name="bg_menu_selected">#660099FF</color>
+
+    <color name="bg_genre_list_focused">#77ff0000</color>
+    <color name="bg_genre_list_normal">#33ff0000</color>
+
+    <color name="dialog_setting_menu_item_focus_border_color">@color/mainTheme</color>
+    <color name="dialog_setting_menu_item_focus_shadow_color">#780000ff</color>
+
+    <color name="widget_live_overlay_focus_border_color">@color/mainTheme</color>
+    <color name="widget_live_overlay_focus_shadow_color">#780000ff</color>
+
+    <color name="widget_live_overlay_list_item_text_actived_textcolor">#ffffff</color>
+    <color name="widget_live_overlay_list_item_text_textcolor">#99ffffff</color>
+    <color name="widget_live_overlay_list_item_text_actived_checked_textcolor">#eca50d</color>
+    <color name="widget_live_overlay_list_item_text_checked_textcolor">#eca50d</color>
+    <color name="widget_live_overlay_list_item_subtext_actived_textcolor">#99ffffff</color>
+    <color name="widget_live_overlay_list_item_subtext_textcolor">#99ffffff</color>
+    <color name="widget_live_overlay_list_item_subtext_actived_checked_textcolor">#eca50d</color>
+    <color name="widget_live_overlay_list_item_subtext_checked_textcolor">#eca50d</color>
+
+    <color name="widget_live_overlay_long_list_item_subtext_actived_textcolor">#747474</color>
+    <color name="widget_live_overlay_long_list_item_subtext_textcolor">#747474</color>
+    <color name="widget_live_overlay_long_list_item_text_textcolor">#747474</color>
+
+    <color name="widget_live_overlay_short_list_item_subtext_actived_textcolor">#999999</color>
+    <color name="widget_live_overlay_short_list_item_subtext_textcolor">#999999</color>
+    <color name="widget_live_overlay_short_list_item_text_textcolor">#999999</color>
+
+    <color name="widget_live_overlay_list_epg_header_textcolor">#3a3a3a</color>
+
+    <color name="widget_live_all_items_checked_bgcolor">#18ffffff</color>
+
+    <color name="activity_vod_genre_item_text_actived_textcolor">#ffffff</color>
+    <color name="activity_vod_genre_item_text_textcolor">#99ffffff</color>
+    <color name="activity_vod_genre_item_text_actived_checked_textcolor">#eca50d</color>
+    <color name="activity_vod_genre_item_text_checked_textcolor">#eca50d</color>
+
+    <!--<color name="colorBlue2">#3399ff</color>-->
+    <!--<color name="colorBlue2Alpha">#223399ff</color>-->
+    <color name="common0">#2e3255</color>
+    <color name="common1">#0a3455</color>
+    <color name="common2">#323859</color>
+    <color name="common3">@color/colorWhiteAlpha1</color>
+    <color name="common4">@color/colorWhiteAlpha2</color>
+    <color name="bg_alert">#252a3e</color>
+    <color name="bg_alert_btn">#58535670</color>
+    <color name="bg_alert_btn_focused">@color/mainTheme</color>
+    <color name="grayAlpha">#a1c1c1c1</color>
+
+    <color name="item_focus_color">#99ff0000</color>
+
+    <color name="widget_live_overlay_list_item_header_textcolor">#99ffffff</color>
+    <color name="widget_live_overlay_list_item_header_textcolor_actived">#ffffff</color>
+
+    <!-- block colors -->
+    <color name="block_color1">#0084ff</color>
+    <color name="block_color2">#4e7197</color>
+    <color name="block_color3">#22b270</color>
+    <color name="block_color4">#f40336</color>
+    <color name="block_color5">#f4c043</color>
+    <color name="block_color6">#00d5e9</color>
+    <color name="block_color7">#ff8f01</color>
+    <color name="block_color8">#4e7c96</color>
+    <color name="block_color9">#4e7e98</color>
+    <color name="block_color10">#00b4ff</color>
+    <color name="block_color11">#ff8400</color>
+    <color name="block_color12">#05b1c8</color>
+    <color name="block_color13">#38afff</color>
+    <color name="block_color14">#44c857</color>
+    <color name="block_color15">#7430ff</color>
+
+    <color name="genre_color1">#00b645</color>
+    <color name="genre_color2">#0084ff</color>
+    <color name="genre_color3">#ff8400</color>
+    <color name="genre_color4">#f40336</color>
+    <color name="genre_color5">#00cee8</color>
+    <color name="genre_color6">#7430ff</color>
+
+    <color name="subcate_color1">#1b9bfc</color>
+    <color name="subcate_color2">#f94b31</color>
+    <color name="subcate_color3">#862cff</color>
+    <color name="subcate_color4">#24b1bb</color>
+    <color name="subcate_color5">#ff8d1d</color>
+    <color name="subcate_color6">#24b1bb</color>
+    <color name="subcate_color7">#b6d6f9</color>
+    <color name="subcate_color8">#001a09</color>
+    <color name="golden">#eca50d</color>
+
+
+    <color name="mainTheme">#3399ff</color>
+
+    <color name="mainThemeAlpha">#223399ff</color>
+</resources>
