@@ -16,7 +16,7 @@
         android:name=".ZlApplication"
         android:usesCleartextTraffic="true"
         >
-        <activity android:name=".exo.SingleLooper2Activity">
+        <activity android:name=".exo2.ExoLooperActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

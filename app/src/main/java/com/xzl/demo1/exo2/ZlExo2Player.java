@@ -1,40 +1,28 @@
-package com.xzl.demo1.exo;
+package com.xzl.demo1.exo2;
 
 import android.content.Context;
 import android.net.Uri;
-import android.os.Environment;
 import android.text.TextUtils;
-import android.widget.TextView;
 
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.DefaultRenderersFactory;
-import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.ExoPlayerFactory;
 import com.google.android.exoplayer2.Player;
 import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.exoplayer2.analytics.AnalyticsListener;
 import com.google.android.exoplayer2.source.ExtractorMediaSource;
 import com.google.android.exoplayer2.source.MediaSource;
-import com.google.android.exoplayer2.source.TrackGroupArray;
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
 import com.google.android.exoplayer2.trackselection.RandomTrackSelection;
 import com.google.android.exoplayer2.trackselection.TrackSelection;
-import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.exoplayer2.upstream.DataSource;
-import com.google.android.exoplayer2.upstream.DataSpec;
 import com.google.android.exoplayer2.upstream.FileDataSourceFactory;
-import com.google.android.exoplayer2.upstream.TransferListener;
-import com.google.android.exoplayer2.util.EventLogger;
 import com.google.android.exoplayer2.util.Log;
 import com.google.android.exoplayer2.video.VideoListener;
 import com.xzl.demo1.LLog;
-import com.xzl.demo1.R;
 
-import java.net.URL;
-
-public class ZlExoPlayer {
+public class ZlExo2Player {
     private final Context mContext;
     private PlayerView mPlayerView;
     private SimpleExoPlayer mPlayer;
@@ -50,7 +38,7 @@ public class ZlExoPlayer {
     private final static String TAG = "VideoDebug";
 
 
-    public ZlExoPlayer(Context context, PlayerView mPlayerView,ISinglePlayerListener listener) {
+    public ZlExo2Player(Context context, PlayerView mPlayerView, ISinglePlayerListener listener) {
         this.mContext = context;
         this.mPlayerView = mPlayerView;
 

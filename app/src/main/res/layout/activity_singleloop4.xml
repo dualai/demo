@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.ContentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<android.support.v7.widget.ContentFrameLayout-->
+        <!--android:id="@+id/view_playroot"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<com.google.android.exoplayer2.ui.PlayerView-->
+            <!--android:id="@+id/view_player0"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--app:surface_type="texture_view"-->
+            <!--&gt;-->
+
+        <!--</com.google.android.exoplayer2.ui.PlayerView>-->
+
+        <!--<com.google.android.exoplayer2.ui.PlayerView-->
+            <!--android:id="@+id/view_player1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_marginTop="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--app:surface_type="texture_view"-->
+        <!--/>-->
+
+    <!--</android.support.v7.widget.ContentFrameLayout>-->
+
+    <android.support.v7.widget.ContentFrameLayout
+        android:id="@+id/view_playroot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/view_player0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:surface_type="texture_view"
+            >
+
+        </com.google.android.exoplayer2.ui.PlayerView>
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/view_player1"
+            android:layout_width="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_height="match_parent"
+            app:surface_type="texture_view"
+            />
+
+    </android.support.v7.widget.ContentFrameLayout>
+
+
+    <android.support.v7.widget.ContentFrameLayout
+        android:id="@+id/view_testswap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/test1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/red" />
+
+        <View
+            android:id="@+id/test2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlueAlpha7" />
+
+    </android.support.v7.widget.ContentFrameLayout>
+
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".exo.FileActivity">
+
+        <Button
+            android:id="@+id/btn_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始播放" />
+
+        <Button
+            android:id="@+id/btn_release"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="销毁" />
+
+        <Button
+            android:id="@+id/btn_swapview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="交换画布" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+</android.support.v7.widget.ContentFrameLayout>

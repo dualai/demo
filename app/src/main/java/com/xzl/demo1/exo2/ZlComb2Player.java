@@ -1,18 +1,8 @@
-package com.xzl.demo1.exo;
+package com.xzl.demo1.exo2;
 
 import android.content.Context;
-import android.graphics.PixelFormat;
-import android.support.annotation.Nullable;
-import android.view.SurfaceView;
-import android.view.View;
 
-import com.google.android.exoplayer2.ExoPlaybackException;
-import com.google.android.exoplayer2.PlaybackParameters;
 import com.google.android.exoplayer2.Player;
-import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.exoplayer2.Timeline;
-import com.google.android.exoplayer2.source.TrackGroupArray;
-import com.google.android.exoplayer2.trackselection.TrackSelectionArray;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.xzl.demo1.LLog;
 
@@ -37,10 +27,10 @@ import java.util.List;
  *            getChildDrawIndex
  */
 
-public class ZlCombPlayer {
-    private ZlExoPlayer mFrontPlayer;
-    private ZlExoPlayer mPlayer0;
-    private ZlExoPlayer mPlayer1;
+public class ZlComb2Player {
+    private ZlExo2Player mFrontPlayer;
+    private ZlExo2Player mPlayer0;
+    private ZlExo2Player mPlayer1;
 
     private PlayerView mFrontPlayerView;
     private PlayerView mPlayerView0;
@@ -52,14 +42,14 @@ public class ZlCombPlayer {
     private final static String TAG = "VideoDebug";
 
 
-    public ZlCombPlayer(Context context, PlayerView playerView0, PlayerView playerView1) {
+    public ZlComb2Player(Context context, PlayerView playerView0, PlayerView playerView1) {
         this.mContext = context;
         this.mPlayerView0 = playerView0;
         this.mPlayerView1 = playerView1;
 //        mPlayerView0.setVisibility(PlayerView.VISIBLE);
 //        mPlayerView1.setVisibility(PlayerView.INVISIBLE);
-        mPlayer0 = new ZlExoPlayer(mContext, mPlayerView0, player0Listener);
-        mPlayer1 = new ZlExoPlayer(mContext, mPlayerView1, player1Listener);
+        mPlayer0 = new ZlExo2Player(mContext, mPlayerView0, player0Listener);
+        mPlayer1 = new ZlExo2Player(mContext, mPlayerView1, player1Listener);
         mVideoList = new ArrayList<>();
     }
 
@@ -107,7 +97,7 @@ public class ZlCombPlayer {
         if (mFrontPlayer == null) return;
         PlayerView preloadPlayerView = mFrontPlayerView == mPlayerView0 ? mPlayerView1 : mPlayerView0;
 
-        ZlExoPlayer preloadPlayer = mFrontPlayer == mPlayer0 ? mPlayer1 : mPlayer0;
+        ZlExo2Player preloadPlayer = mFrontPlayer == mPlayer0 ? mPlayer1 : mPlayer0;
         preloadPlayer.start(getCurrentUrl());
     }
 
@@ -117,7 +107,7 @@ public class ZlCombPlayer {
         return mVideoList.get(mediaSourceIndex);
     }
 
-    private final ZlExoPlayer.ISinglePlayerListener player0Listener = new ZlExoPlayer.ISinglePlayerListener() {
+    private final ZlExo2Player.ISinglePlayerListener player0Listener = new ZlExo2Player.ISinglePlayerListener() {
         @Override
         public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
             switch (playbackState) {
@@ -140,7 +130,7 @@ public class ZlCombPlayer {
         }
     };
 
-    private final ZlExoPlayer.ISinglePlayerListener player1Listener = new ZlExoPlayer.ISinglePlayerListener() {
+    private final ZlExo2Player.ISinglePlayerListener player1Listener = new ZlExo2Player.ISinglePlayerListener() {
         @Override
         public void onPlayerStateChanged(boolean playWhenReady, int playbackState) {
             switch (playbackState) {
