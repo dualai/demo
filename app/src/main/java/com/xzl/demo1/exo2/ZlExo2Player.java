@@ -3,6 +3,8 @@ package com.xzl.demo1.exo2;
 import android.content.Context;
 import android.net.Uri;
 import android.text.TextUtils;
+import android.view.SurfaceView;
+import android.view.TextureView;
 
 import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.DefaultRenderersFactory;
@@ -24,7 +26,7 @@ import com.xzl.demo1.LLog;
 
 public class ZlExo2Player {
     private final Context mContext;
-    private PlayerView mPlayerView;
+    private SurfaceView mPlayerView;
     private SimpleExoPlayer mPlayer;
 
     public interface ISinglePlayerListener extends VideoListener,Player.EventListener {
@@ -38,7 +40,7 @@ public class ZlExo2Player {
     private final static String TAG = "VideoDebug";
 
 
-    public ZlExo2Player(Context context, PlayerView mPlayerView, ISinglePlayerListener listener) {
+    public ZlExo2Player(Context context, SurfaceView mPlayerView, ISinglePlayerListener listener) {
         this.mContext = context;
         this.mPlayerView = mPlayerView;
 
@@ -50,7 +52,7 @@ public class ZlExo2Player {
     }
 
     private void initSettings() {
-        mPlayerView.setResizeMode(AspectRatioFrameLayout.RESIZE_MODE_FILL);
+//        mPlayerView.setResizeMode(AspectRatioFrameLayout.RESIZE_MODE_FILL);
     }
 
 
@@ -67,11 +69,16 @@ public class ZlExo2Player {
             trackSelector = new DefaultTrackSelector(trackSelectionFactory);
             trackSelector.setParameters(trackSelectorParameters);
             mPlayer = ExoPlayerFactory.newSimpleInstance(mContext, renderersFactory, trackSelector);
+
+//            mPlayer.setVideoTextureView(mPlayerView);
+
+            mPlayer.setVideoSurfaceView(mPlayerView);
+
             mPlayer.setPlayWhenReady(false);
             mPlayer.addListener(playerListener);
             mPlayer.addVideoListener(playerListener);
             mPlayer.prepare(mediaSource);
-            mPlayerView.setPlayer(mPlayer);
+//            mPlayerView.setPlayer(mPlayer);
 
         } catch (Exception ex) {
             ex.printStackTrace();

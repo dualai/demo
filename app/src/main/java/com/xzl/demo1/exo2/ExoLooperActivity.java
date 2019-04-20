@@ -18,14 +18,12 @@ import java.io.File;
 
 public class ExoLooperActivity extends AppCompatActivity {
 
-    private ZlComb2Player zlCombPlayer;
-
-    private Button swapBtn;
+    private ZlComb2Player zlComb2Player;
     private ViewGroup playRootView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_singleloop4);
+        setContentView(R.layout.activity_exolooper);
 
         initView();
 
@@ -37,45 +35,19 @@ public class ExoLooperActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if(zlCombPlayer != null){
-            zlCombPlayer.release();
+        if(zlComb2Player != null){
+            zlComb2Player.release();
         }
     }
 
     private void initView() {
         View playBtn = findViewById(R.id.btn_player);
-        View swapBtn = findViewById(R.id.btn_swapview);
-        View releaseBtn = findViewById(R.id.btn_release);
         playRootView = findViewById(R.id.view_playroot);
 
         playBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                zlCombPlayer.start();
-            }
-        });
-
-        releaseBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                zlCombPlayer.release();
-            }
-        });
-
-        ViewGroup testGroup = findViewById(R.id.view_testswap);
-        final View view0 = findViewById(R.id.test1);
-        final View view1 = findViewById(R.id.test2);
-
-        swapBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(!isView0Front) {
-                    view0.bringToFront();
-                }else{
-                    view1.bringToFront();
-                }
-
-                isView0Front = !isView0Front;
+                zlComb2Player.start();
             }
         });
     }
@@ -83,15 +55,15 @@ public class ExoLooperActivity extends AppCompatActivity {
     private boolean isView0Front = false;
 
     private void initPlayer() {
-        if (zlCombPlayer != null) return;
-        zlCombPlayer = new ZlComb2Player(this,findViewById(R.id.view_player0),findViewById(R.id.view_player1));
+        if (zlComb2Player != null) return;
+        zlComb2Player = new ZlComb2Player(this,findViewById(R.id.view_player0),findViewById(R.id.view_player1));
 
         String video0 = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "VID_20190420_155850.mp4";
         String video1 = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "VID_20190420_155901.mp4";
         String video2 = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "VID_20190420_155909.mp4";
-        zlCombPlayer.addUrl(video0);
-        zlCombPlayer.addUrl(video1);
-        zlCombPlayer.addUrl(video2);
+        zlComb2Player.addUrl(video0);
+        zlComb2Player.addUrl(video1);
+        zlComb2Player.addUrl(video2);
 
     }
 

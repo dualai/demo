@@ -1,6 +1,8 @@
 package com.xzl.demo1.exo2;
 
 import android.content.Context;
+import android.view.SurfaceView;
+import android.view.TextureView;
 
 import com.google.android.exoplayer2.Player;
 import com.google.android.exoplayer2.ui.PlayerView;
@@ -12,19 +14,19 @@ import java.util.List;
 /**
  * 测试结果：
  * Exoplayer: 有直接混合的模式(ConcatenatingMediaSource,setRepeatMode)，但是因为期间播放完成没有事件抛出来，所以，如果期间有播放图片的话，不能控制
- *            如果是SurfaceView重叠，那么有问题
- *            TextureView重叠,可以
- *
- *            SurfaceView:尝试使用Visibile模式,其他模式在探索 https://blog.csdn.net/email_jade/article/details/82895335
- *            https://www.jianshu.com/p/d558a4c9c868
- *
- *            https://blog.csdn.net/gfg156196/article/details/72899287
- *
- *            https://blog.csdn.net/xuedaqian123/article/details/77878781
- *
- *            https://blog.csdn.net/smileorcryps/article/details/52614631
- *
- *            getChildDrawIndex
+ * 如果是SurfaceView重叠，那么有问题
+ * TextureView重叠,可以
+ * <p>
+ * SurfaceView:尝试使用Visibile模式,其他模式在探索 https://blog.csdn.net/email_jade/article/details/82895335
+ * https://www.jianshu.com/p/d558a4c9c868
+ * <p>
+ * https://blog.csdn.net/gfg156196/article/details/72899287
+ * <p>
+ * https://blog.csdn.net/xuedaqian123/article/details/77878781
+ * <p>
+ * https://blog.csdn.net/smileorcryps/article/details/52614631
+ * <p>
+ * getChildDrawIndex
  */
 
 public class ZlComb2Player {
@@ -32,9 +34,9 @@ public class ZlComb2Player {
     private ZlExo2Player mPlayer0;
     private ZlExo2Player mPlayer1;
 
-    private PlayerView mFrontPlayerView;
-    private PlayerView mPlayerView0;
-    private PlayerView mPlayerView1;
+    private SurfaceView mFrontPlayerView;
+    private SurfaceView mPlayerView0;
+    private SurfaceView mPlayerView1;
 
     private final Context mContext;
 
@@ -42,12 +44,10 @@ public class ZlComb2Player {
     private final static String TAG = "VideoDebug";
 
 
-    public ZlComb2Player(Context context, PlayerView playerView0, PlayerView playerView1) {
+    public ZlComb2Player(Context context, SurfaceView playerView0, SurfaceView playerView1) {
         this.mContext = context;
         this.mPlayerView0 = playerView0;
         this.mPlayerView1 = playerView1;
-//        mPlayerView0.setVisibility(PlayerView.VISIBLE);
-//        mPlayerView1.setVisibility(PlayerView.INVISIBLE);
         mPlayer0 = new ZlExo2Player(mContext, mPlayerView0, player0Listener);
         mPlayer1 = new ZlExo2Player(mContext, mPlayerView1, player1Listener);
         mVideoList = new ArrayList<>();
@@ -68,40 +68,40 @@ public class ZlComb2Player {
     public void start() {
         if (mVideoList.size() == 0) return;
         if (mFrontPlayer == null) {
-            //初始化，直接让player0开始播放
+            //playCurrent
             mFrontPlayer = mPlayer0;
             mFrontPlayerView = mPlayerView0;
-
-            mFrontPlayerView.bringToFront();
-
             mFrontPlayer.start(getCurrentUrl());
             mFrontPlayer.play();
 
-            //preload player1
+            //preloadNext
+            mPlayerView1.setX(-mPlayerView1.getMeasuredWidth());
             mPlayer1.start(getCurrentUrl());
         }
     }
 
     private void swapPlayer() {
         if (mFrontPlayer == null) return;
+        //playCurrent
         mFrontPlayerView = mFrontPlayerView == mPlayerView0 ? mPlayerView1 : mPlayerView0;
+        mFrontPlayerView.setX(0);
         mFrontPlayer = mFrontPlayer == mPlayer0 ? mPlayer1 : mPlayer0;
-//        mFrontPlayerView.setVisibility(PlayerView.VISIBLE);
-        mFrontPlayerView.bringToFront();
         mFrontPlayer.play();
+        //preloadNext
         preload();
     }
 
 
     private void preload() {
         if (mFrontPlayer == null) return;
-        PlayerView preloadPlayerView = mFrontPlayerView == mPlayerView0 ? mPlayerView1 : mPlayerView0;
-
+        SurfaceView preloadPlayerView = mFrontPlayerView == mPlayerView0 ? mPlayerView1 : mPlayerView0;
+        preloadPlayerView.setX(-preloadPlayerView.getMeasuredWidth());
         ZlExo2Player preloadPlayer = mFrontPlayer == mPlayer0 ? mPlayer1 : mPlayer0;
         preloadPlayer.start(getCurrentUrl());
     }
 
     private int mediaSourceIndex = -1;
+
     private String getCurrentUrl() {
         mediaSourceIndex = mediaSourceIndex >= mVideoList.size() - 1 ? 0 : ++mediaSourceIndex;
         return mVideoList.get(mediaSourceIndex);
