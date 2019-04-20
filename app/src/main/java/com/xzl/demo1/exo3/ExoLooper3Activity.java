@@ -1,4 +1,4 @@
-package com.xzl.demo1.exo2;
+package com.xzl.demo1.exo3;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -10,20 +10,20 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.Toast;
+
 import com.xzl.demo1.R;
 
 import java.io.File;
 
-public class ExoLooperActivity extends AppCompatActivity {
+public class ExoLooper3Activity extends AppCompatActivity {
 
-    private ZlComb2Player zlComb2Player;
+    private ZlComb3Player zlComb3Player;
     private ViewGroup playRootView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exolooper);
+        setContentView(R.layout.activity_exolooper3);
 
         initView();
 
@@ -35,8 +35,8 @@ public class ExoLooperActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if(zlComb2Player != null){
-            zlComb2Player.release();
+        if(zlComb3Player != null){
+            zlComb3Player.release();
         }
     }
 
@@ -47,23 +47,21 @@ public class ExoLooperActivity extends AppCompatActivity {
         playBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                zlComb2Player.start();
+                zlComb3Player.start();
             }
         });
     }
 
-    private boolean isView0Front = false;
-
     private void initPlayer() {
-        if (zlComb2Player != null) return;
-        zlComb2Player = new ZlComb2Player(this,findViewById(R.id.view_player0),findViewById(R.id.view_player1));
+        if (zlComb3Player != null) return;
+        zlComb3Player = new ZlComb3Player(this,findViewById(R.id.view_player0),findViewById(R.id.view_player1));
 
         String video0 = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "VID_20190420_155850.mp4";
         String video1 = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "VID_20190420_155901.mp4";
         String video2 = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "VID_20190420_155909.mp4";
-        zlComb2Player.addUrl(video0);
-        zlComb2Player.addUrl(video1);
-        zlComb2Player.addUrl(video2);
+        zlComb3Player.addUrl(video0);
+        zlComb3Player.addUrl(video1);
+        zlComb3Player.addUrl(video2);
 
     }
 
