@@ -39,6 +39,8 @@ import android.support.v7.app.AppCompatActivity;
  *
  * Surfaceview原理 ：https://blog.csdn.net/Luoshengyang/article/details/8661317
  *
+ * 大小切换：https://www.jianshu.com/p/5bbc7a563ef7
+ *
  */
 
 
