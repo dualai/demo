@@ -41,6 +41,14 @@ import android.support.v7.app.AppCompatActivity;
  *
  * 大小切换：https://www.jianshu.com/p/5bbc7a563ef7
  *
+ *
+ * 思考微信的大小窗口视频切换问题，TexureView？ 破解微信源码看看
+ *
+ * 多个SurfaceView实现？微信有四个SurfaceView？
+ *
+ * 把需要隐藏的SurfaceView设置很小，眼睛看不见，切换的时候设回来
+ *
+ *
  */
 
 
