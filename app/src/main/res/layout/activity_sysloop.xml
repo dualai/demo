@@ -5,14 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.ContentFrameLayout
+    <android.support.v7.widget.LinearLayoutCompat
         android:id="@+id/view_playroot"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        
+        <SurfaceView
+            android:id="@+id/view_player0"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
 
-    </android.support.v7.widget.ContentFrameLayout>
+        <SurfaceView
+            android:id="@+id/view_player1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+    </android.support.v7.widget.LinearLayoutCompat>
 
 
 
@@ -22,7 +33,6 @@
         android:gravity="center"
         android:orientation="vertical"
         tools:context=".exo.FileActivity">
-
         <Button
             android:id="@+id/btn_player"
             android:layout_width="wrap_content"
@@ -34,13 +44,5 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="销毁" />
-
-        <Button
-            android:id="@+id/btn_swapview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="交换画布" />
-
     </android.support.v7.widget.LinearLayoutCompat>
 </android.support.v7.widget.ContentFrameLayout>

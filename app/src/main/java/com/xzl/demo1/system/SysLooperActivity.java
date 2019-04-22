@@ -8,6 +8,8 @@ import android.widget.VideoView;
 import com.xzl.demo1.R;
 
 public class SysLooperActivity extends Activity {
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
