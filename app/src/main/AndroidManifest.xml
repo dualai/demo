@@ -16,7 +16,7 @@
         android:name=".ZlApplication"
         android:usesCleartextTraffic="true"
         >
-        <activity android:name=".system.SysLooperActivity">
+        <activity android:name=".life.LifeCyclerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
