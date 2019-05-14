@@ -16,7 +16,9 @@
         android:name=".ZlApplication"
         android:usesCleartextTraffic="true"
         >
-        <activity android:name=".exo2.ExoLooper2Activity">
+        <activity android:name=".dian9.MainActivity"
+            android:screenOrientation="sensorLandscape"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
