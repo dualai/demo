@@ -5,7 +5,7 @@ package com.xzl.demo1.rxjava;
  */
 public abstract class BaseTest {
     public BaseTest() {
-        test();
+
     }
     protected abstract void test();
 }
