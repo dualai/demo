@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">案例%1$s,%2$.3f演示 </string>
+
+    <string name="app_name2">案例%1$s,%2$.2f,double = %3$f 演示~~~1 ,整形 == %4$d</string>
+    <string name="change_language">切换语言</string>
+    <string name="meters_n">%f\n米</string>
+</resources>

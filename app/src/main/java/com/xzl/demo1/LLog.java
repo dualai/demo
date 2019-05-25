@@ -5,7 +5,7 @@ import com.orhanobut.logger.Logger;
 
 
 public class LLog {
-    private final static String TAG = "VideoDebug";
+    private final static String TAG = "MTest";
     public static void d(boolean isTrace, String args) {
         if (!isTrace) {
             Log.d(TAG, args);
@@ -26,7 +26,7 @@ public class LLog {
         Logger.t(TAG).json(args);
     }
 
-    public static void d(String args) {
+    public static void  d(String args) {
         Log.d(TAG, args);
     }
 
