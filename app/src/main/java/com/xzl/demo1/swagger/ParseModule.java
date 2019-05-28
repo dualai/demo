@@ -24,7 +24,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -32,8 +31,6 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Set;
-
-import static android.os.Environment.DIRECTORY_DOCUMENTS;
 
 public class ParseModule {
     public ParseModule() {
@@ -47,14 +44,6 @@ public class ParseModule {
     private final static String[] host = {"kt-dag", "yun-ti", "com"};
     private final static String port = "6520";
 
-//    "header": [
-//    {
-//        "key": "Content-Type",
-//            "name": "Content-Type",
-//            "value": "application/json",
-//            "type": "text"
-//    }
-//						],
 
 //    swapUI
 //
@@ -64,7 +53,6 @@ public class ParseModule {
 // ###分类方式
 //
 //
-//
 //###配置消息类型和消息描述的键值对
 ///api/device/v1/screen/getAlarmBroadcastCfg
 //
@@ -72,15 +60,14 @@ public class ParseModule {
 //###代码段
 //
 //    参数类型，
-//    type
+//type
 //1、string, none,uint64,
-//            2、integer int32,int64
+//2、integer int32,int64
 //3、number double
 //4、array，那么同一个节点，一定有个items，索引到相应的定义去
 //5、 "$ref"：直接找索引
 //
 //    如果是array，那么必然有个"items":{"$ref":"..."}
-//
 //###软件怎么做？(应该画流程图)
 
 
@@ -252,19 +239,7 @@ public class ParseModule {
             postMan.setItemMap(null);
             Gson gson = new Gson();
             String jsonString = gson.toJson(postMan);
-
-//            Logger.json(jsonString);
-
-            File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "Postman.json");
-            if (file.exists()) {
-                file.delete();
-            }
-            FileOutputStream fileOutputStream = new FileOutputStream(file);
-            BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(fileOutputStream);
-            bufferedOutputStream.write(jsonString.getBytes(Charset.forName("UTF-8")));
-            bufferedOutputStream.flush();
-            bufferedOutputStream.close();
-
+            trans2PostmanFile(jsonString);
 
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -326,7 +301,16 @@ public class ParseModule {
         return gson.toJson(jsonObject);
     }
 
-    private static void trans2PostmanFile() {
-
+    private static void trans2PostmanFile(String jsonString) throws Exception
+    {
+        File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "Postman.json");
+        if (file.exists()) {
+            file.delete();
+        }
+        FileOutputStream fileOutputStream = new FileOutputStream(file);
+        BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(fileOutputStream);
+        bufferedOutputStream.write(jsonString.getBytes(Charset.forName("UTF-8")));
+        bufferedOutputStream.flush();
+        bufferedOutputStream.close();
     }
 }
