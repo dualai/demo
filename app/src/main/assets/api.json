@@ -5832,6 +5832,31 @@
         },
         "name": {
           "type": "string"
+        },
+        "status": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "message": {
+          "type": "string"
+        },
+        "monitorList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DataPlanInfoMaterialMonitor"
+          }
+        }
+      }
+    },
+    "DataPlanInfoMaterialMonitor": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "url": {
+          "type": "string"
         }
       }
     },
@@ -9324,7 +9349,7 @@
           "$ref": "#/definitions/liftGatewaySetWifiCfgReqWifiCfg"
         }
       },
-      "title": "获取Wifi配置响应"
+      "title": "Wifi配置请求"
     },
     "liftGatewaySetWifiCfgReqRadio": {
       "type": "object",
@@ -10341,6 +10366,12 @@
         "quakeThreshold": {
           "type": "integer",
           "format": "int64"
+        },
+        "unitName": {
+          "type": "string"
+        },
+        "cityName": {
+          "type": "string"
         }
       }
     },
@@ -11575,6 +11606,12 @@
         },
         "districtName": {
           "type": "string"
+        },
+        "unitName": {
+          "type": "string"
+        },
+        "cityName": {
+          "type": "string"
         }
       },
       "title": "设置电梯基本信息请求"
@@ -12764,6 +12801,24 @@
           "format": "int64"
         },
         "name": {
+          "type": "string"
+        },
+        "monitorList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/liftScrnUpdatePlayPlanReqMaterialMonitor"
+          }
+        }
+      }
+    },
+    "liftScrnUpdatePlayPlanReqMaterialMonitor": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "url": {
           "type": "string"
         }
       }
