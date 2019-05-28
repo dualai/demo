@@ -138,7 +138,7 @@ public class ParseModule {
         LLog.d("start loadOriginFile...");
         StringBuilder result = new StringBuilder();
         try {
-            InputStreamReader inputReader = new InputStreamReader(mContext.getResources().getAssets().open("api.json"));
+            InputStreamReader inputReader = new InputStreamReader(mContext.getResources().getAssets().open("swaggerdata_0528"));
             BufferedReader bufReader = new BufferedReader(inputReader);
             String line;
             while ((line = bufReader.readLine()) != null)
