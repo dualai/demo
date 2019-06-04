@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.xzl.demo1.autotext.contentviewpagewithimg.AutoVScrollTextViewCtSingle
+        android:id="@+id/left_tv"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_vertical"
+        android:textColor="#aa000000"
+        android:textSize="33sp"
+        app:addLineSpace="15dp"
+        app:bySpeed="2"
+        app:byStep="10"
+        app:delayBegin="1"
+        app:rstOnFinish="true"
+        android:background="#ff0000"
+        android:text=""
+        />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AutoVScrollTextViewCtSingle">
+        <attr name="delayBegin" format="integer" />
+        <attr name="rstOnFinish" format="boolean" />
+        <attr name="byStep" format="integer" />
+        <attr name="bySpeed" format="integer" />
+        <attr name="addLineSpace" format="dimension" />
+        <attr name="noticeHeight" format="dimension" />
+    </declare-styleable>
+</resources>

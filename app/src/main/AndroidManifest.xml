@@ -16,7 +16,7 @@
         android:name=".ZlApplication"
         android:usesCleartextTraffic="true"
         >
-        <activity android:name=".IndexActivity">
+        <activity android:name=".autotext.contentviewpagewithimg.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
