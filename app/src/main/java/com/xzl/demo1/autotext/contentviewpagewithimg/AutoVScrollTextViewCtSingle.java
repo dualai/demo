@@ -324,7 +324,7 @@ public class AutoVScrollTextViewCtSingle extends android.support.v7.widget.AppCo
                         break;
                     }
                     nowPoint -= step;
-                    if (myHeight != 0 && nowPoint < -myHeight + getOneTxtH()) {
+                    if (myHeight != 0 && nowPoint < -myHeight + addLineSpace) {
                         if (resetOnFinish) {
                             nowPoint = 0;
                             postInvalidate();

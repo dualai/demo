@@ -16,42 +16,11 @@ public class MainActivity extends Activity implements AutoVScrollTextViewCtSingl
         setContentView(R.layout.activity_autov_main);
         textViewCtSingle = findViewById(R.id.left_tv);
         textViewCtSingle.setText("绝对是咖啡就开始打发范德萨范德萨范\n德萨范德萨范德萨发士大夫if是个积分兑换更合适的"+
-                "\n机风蛋糕绝对是个健康的发生国际华府大哥\nfdafdasfdasfdasfdsaf\n发范德萨范德萨"
+                "\n份经过几个房间号国家机关的"
         );
-//        textViewCtSingle.setText("绝对是咖啡就开始打发范德萨范德萨范\n德萨范德萨范德萨发士大夫if是个积分兑换更合适的"
-//        );
         textViewCtSingle.setScrollStatusListener(MainActivity.this);
         textViewCtSingle.stopAndReset();
         textViewCtSingle.reset();
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                textViewCtSingle.setText("绝对是咖啡就开始打\n一二三德萨范德萨范德萨发士大夫if是个积分兑换更合适的");
-                textViewCtSingle.stopAndReset();
-                textViewCtSingle.reset();
-            }
-        },3000);
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                textViewCtSingle.setText("绝对是咖啡就开始打发范德萨范德萨范\n德萨范德萨范德萨发士大夫if是个积分兑换更合适的"+
-                        "\n机风蛋糕绝对是个健康的发生国际华府大哥\nfdafdasfdasfdasfdsaf\n发范德萨范德萨"
-                );
-                textViewCtSingle.stopAndReset();
-                textViewCtSingle.reset();
-            }
-        },6000);
-
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                textViewCtSingle.setText("绝对是咖啡就开始打\n一二三德萨范德萨范德萨发士大夫if是个积分兑换更合适的");
-                textViewCtSingle.stopAndReset();
-                textViewCtSingle.reset();
-            }
-        },9000);
     }
 
     @Override

@@ -3,21 +3,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.xzl.demo1.autotext.contentviewpagewithimg.AutoVScrollTextViewCtSingle
-        android:id="@+id/left_tv"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:gravity="center_vertical"
-        android:textColor="#aa000000"
-        android:textSize="33sp"
-        app:addLineSpace="15dp"
-        app:bySpeed="2"
-        app:byStep="10"
-        app:delayBegin="1"
-        app:rstOnFinish="true"
-        android:background="#ff0000"
-        android:text=""
-        />
+        android:layout_height="200dp"
+        android:background="#0099ff"
+        android:layout_gravity="center"
+        >
+        <com.xzl.demo1.autotext.contentviewpagewithimg.AutoVScrollTextViewCtSingle
+            android:id="@+id/left_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#aa000000"
+            android:textSize="33sp"
+            app:addLineSpace="15dp"
+            app:bySpeed="2"
+            app:byStep="6"
+            app:delayBegin="2"
+            app:rstOnFinish="true"
+            android:text=""
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            />
+    </FrameLayout>
+
 </LinearLayout>
