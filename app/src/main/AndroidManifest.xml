@@ -28,5 +28,9 @@
             android:screenOrientation="sensorPortrait"
             >
         </activity>
+
+        <activity android:name=".presentation.MainActivity"
+            android:screenOrientation="sensorPortrait"
+            />
     </application>
 </manifest>
