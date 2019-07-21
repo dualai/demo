@@ -1,1 +1,1 @@
-include ':app', ':stream', ':socketmodule'
+include ':app', ':stream',':pig_ui', ':WangyiEvent', ':yunmusic', ':materiadesign', ':rvview_3_1_2', ':cjs_3_1_4', ':svg', ':vlayout', ':yunplayer'

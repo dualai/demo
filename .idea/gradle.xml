@@ -8,9 +8,17 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/WangyiEvent" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/socketmodule" />
+            <option value="$PROJECT_DIR$/cjs_3_1_4" />
+            <option value="$PROJECT_DIR$/materiadesign" />
+            <option value="$PROJECT_DIR$/pig_ui" />
+            <option value="$PROJECT_DIR$/rvview_3_1_2" />
             <option value="$PROJECT_DIR$/stream" />
+            <option value="$PROJECT_DIR$/svg" />
+            <option value="$PROJECT_DIR$/vlayout" />
+            <option value="$PROJECT_DIR$/yunmusic" />
+            <option value="$PROJECT_DIR$/yunplayer" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
