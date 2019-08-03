@@ -17,7 +17,7 @@
         android:name=".ZlApplication"
         android:usesCleartextTraffic="true"
         >
-        <activity android:name=".roundimg.RoundImageActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -32,6 +32,7 @@
         <activity android:name=".presentation.MainActivity"
             android:screenOrientation="sensorPortrait"
             />
+        <activity android:name=".delayqueue.MainActivity" />
 
     </application>
 </manifest>

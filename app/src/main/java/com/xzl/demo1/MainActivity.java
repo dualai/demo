@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
     }
 
     private void start(){
-        Intent intent = new Intent(this, com.xzl.demo1.presentation.MainActivity.class);
+        Intent intent = new Intent(this, com.xzl.demo1.delayqueue.MainActivity.class);
         startActivity(intent);
         finish();
     }
