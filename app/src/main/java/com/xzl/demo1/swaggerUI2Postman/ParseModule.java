@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Environment;
 import android.text.TextUtils;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
@@ -232,6 +233,8 @@ public class ParseModule {
                 requestBean.setBody(bodyBean);
                 itemBean.setRequest(requestBean);
                 requestGroup.getItem().add(itemBean);
+
+                LLog.d("do...");
             }
 
             postMan.setItemMap(null);

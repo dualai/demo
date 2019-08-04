@@ -1,6 +1,7 @@
 package com.xzl.demo1;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -60,7 +61,7 @@ import java.util.List;
  */
 
 
-public class IndexActivity extends AppCompatActivity {
+public class IndexActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,17 +86,17 @@ public class IndexActivity extends AppCompatActivity {
         ParseModule.start(this.getApplicationContext());
 
 
-        TypeToken<List<String>> listTypeToken = null;
-        listTypeToken = new TypeToken<List<String>>(){
-            @Override
-            protected Object clone() throws CloneNotSupportedException {
-                return super.clone();
-            }
-
-            @Override
-            protected void finalize() throws Throwable {
-                super.finalize();
-            }
-        };
+//        TypeToken<List<String>> listTypeToken = null;
+//        listTypeToken = new TypeToken<List<String>>(){
+//            @Override
+//            protected Object clone() throws CloneNotSupportedException {
+//                return super.clone();
+//            }
+//
+//            @Override
+//            protected void finalize() throws Throwable {
+//                super.finalize();
+//            }
+//        };
     }
 }
