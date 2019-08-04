@@ -86,7 +86,6 @@ public class ThreadPoolManager {
             while (true)
             {
                 FutureTask futrueTask=null;
-
                 try {
                     /**
                      * 阻塞式函数

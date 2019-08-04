@@ -1,12 +1,16 @@
 package com.zailing.jg_db_downld;
 
+import android.Manifest;
 import android.app.Activity;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
 import com.zailing.jg_db_downld.http.Volley;
+import com.zailing.jg_db_downld.http.download.DownFileManager;
 import com.zailing.jg_db_downld.http.interfaces.IDataListener;
 
 public class HttpActivity extends Activity {
@@ -20,10 +24,26 @@ public class HttpActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        String[] PERMISSIONS_STORAGE = {Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE};
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            int readPermission = this.checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE);
+            //检测是否有权限，如果没有权限，就需要申请
+            if (readPermission != PackageManager.PERMISSION_GRANTED) {
+                this.requestPermissions(PERMISSIONS_STORAGE, 1001);
+            }else{
+
+            }
+        } else {
+
+        }
+
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                login();
+//                login();
+                download();
             }
         },100);
 
@@ -36,14 +56,29 @@ public class HttpActivity extends Activity {
     }
 
 
-    private int count;
+    private void download(){
+        DownFileManager downFileService=new DownFileManager();
+        downFileService.down("http://gdown.baidu.com/data/wisegame/8be18d2c0dc8a9c9/WPSOffice_177.apk");
+    }
 
+
+
+
+
+
+
+
+
+
+
+
+    private int count;
     private void login(){
         User user = new User();
         user.setName("xuluming");
         user.setPassword("21232332");
 
-        for(int i = 0;i<100;i++) {
+        for(int i = 0;i<30;i++) {
 
             Volley.sendRequest(user, url, User.class, new IDataListener<User>() {
                 @Override
