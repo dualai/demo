@@ -1,10 +1,8 @@
-package com.xzl.demo1.swagger;
+package com.xzl.demo1.swaggerUI2Postman;
 
 import android.content.Context;
 import android.os.Environment;
-import android.support.v4.os.EnvironmentCompat;
 import android.text.TextUtils;
-import android.util.ArraySet;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

@@ -7,7 +7,10 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 
-import com.xzl.demo1.swagger.ParseModule;
+import com.google.gson.reflect.TypeToken;
+import com.xzl.demo1.swaggerUI2Postman.ParseModule;
+
+import java.util.List;
 
 
 /**
@@ -80,5 +83,19 @@ public class IndexActivity extends AppCompatActivity {
         }
 
         ParseModule.start(this.getApplicationContext());
+
+
+        TypeToken<List<String>> listTypeToken = null;
+        listTypeToken = new TypeToken<List<String>>(){
+            @Override
+            protected Object clone() throws CloneNotSupportedException {
+                return super.clone();
+            }
+
+            @Override
+            protected void finalize() throws Throwable {
+                super.finalize();
+            }
+        };
     }
 }

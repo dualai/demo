@@ -1,8 +1,6 @@
-package com.xzl.demo1.swagger;
+package com.xzl.demo1.swaggerUI2Postman;
 
 import com.google.gson.JsonArray;
-
-import org.json.JSONArray;
 
 import java.util.LinkedHashMap;
 import java.util.List;
