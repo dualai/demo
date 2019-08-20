@@ -25,6 +25,8 @@ import java.util.List;
  *   2.Comparable接口 T 传入自身的类作为用于比较的对象，其实也是方便使用者直接在int compareTo(T o) 中使用o的api来对比大小；
  *
  *   3.见 Shop的方法 用泛型作为方法限制，跟泛型类无关；
+ *
+ *   4.用在函数里，如果一个类有多个函数重载，并且这些函数的行为一模一样，那么可以用T作为参数；
  */
 
 public class MainActivityUse extends Activity {
